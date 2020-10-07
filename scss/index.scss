@@ -1,0 +1,120 @@
+@import "config/colors";
+
+$icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
+$brand-primary: $blue;
+$link-color: white;
+$font-family-sans-serif: Roboto, sans-serif;
+$body-bg: white;
+
+$navbar-default-link-color: black;
+$navbar-height: 70px;
+$navbar-default-bg: transparent;
+$navbar-default-border: transparent;
+
+$font-size-base: 16px;
+
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.section {
+
+  padding-top: 50px;
+  padding-bottom: 70px;
+  h3 {
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+  .subtitle {
+    margin-bottom: 70px;
+    font-size: 18px;
+    @media (max-width: 860px) {
+      margin-bottom: 0;
+    }
+  }
+  h3.with-subtitle {
+    margin-bottom: 20px;
+  }
+}
+
+#how-to {
+  background-color: lighten($blue, 62%);
+  .section {
+    padding-bottom: 110px;
+    @media (max-width: 860px) {
+      padding-bottom: 50px;
+    }
+  }
+}
+
+#competences {
+  background-color: lighten($crimson, 40%);
+}
+
+#intro {
+  height: 550px;
+
+  color: #fff;
+  background-color: gray;
+  background-image: url('../src/assets/background_cover2.jpg');
+
+  background-repeat: no-repeat;
+  @media (min-width: 1200px) {
+    background-position: center -190px;
+  }
+  background-size: cover;
+
+  .section {
+    padding-top: 125px;
+    padding-bottom: 15px;
+  }
+  h1 {
+    margin-top: 0;
+  }
+  blockquote {
+    margin-top: 20px;
+    font-size: 23px;
+
+  }
+
+  @media (max-width: 900px) {
+    height: 330px;
+    background-image: url('../src/assets/background_cover4.jpg');
+    .section {
+      padding-top: 50px;
+    }
+    h1 {
+      font-size: 25px;
+    }
+    blockquote {
+      font-size: 18px;
+    }
+  }
+
+
+  @media (max-width: 400px) {
+    height: 460px;
+    blockquote {
+      margin-top: 30px;
+    }
+  }
+}
+
+#roadmap {
+
+  background-color: lighten($blue, 20%);
+  color: white;
+  font-size: 18px;
+}
+
+footer {
+  padding: 15px;
+  background-color: #031424;
+  color: white;
+  a {
+    color: white;
+  }
+}
+
