@@ -25,7 +25,7 @@
             <div class="skills bl-color">
               <h1>Required skills </h1>
               <ul>
-                <li class="color" v-for="skill in competence.skills">{{skill.name}}</li>
+                <li class="color" v-for="skill in competence.skills">{{skill.name}}{{skill.levels}}</li>
               </ul>
             </div>
             <div style="color:#757575;" class="mdc-typography--body1">
@@ -195,38 +195,38 @@
 
   .comp-area-1 {
     .bg {
-      background-color: $dark-blue;
+      background-color: $ideasAndOpportunitiesColor;
     }
     .color {
-      color: $dark-blue;
+      color: $ideasAndOpportunitiesColor;
     }
     .bl-color {
-      border-left-color: $dark-blue;
+      border-left-color: $ideasAndOpportunitiesColor;
     }
 
   }
 
   .comp-area-2 {
     .bg {
-      background-color: $crimson;
+      background-color: $resourcesColor;
     }
     .color {
-      color: $crimson;
+      color: $resourcesColor;
     }
     .bl-color {
-      border-left-color: $crimson;
+      border-left-color: $resourcesColor;
     }
   }
 
   .comp-area-3 {
     .bg {
-      background-color: $blue;
+      background-color: $introActionColor;
     }
     .color {
-      color: $blue;
+      color: $introActionColor;
     }
     .bl-color {
-      border-left-color: $blue;
+      border-left-color: $introActionColor;
     }
 
   }

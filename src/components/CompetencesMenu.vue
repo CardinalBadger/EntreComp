@@ -79,16 +79,16 @@
   }
 
   .comp-area-1 .active, .comp-area-1 .active .mdc-list-item__start-detail {
-    color: $dark-blue;
+    color: $ideasAndOpportunitiesColor;
 
   }
 
   .comp-area-2 .active, .comp-area-2 .active .mdc-list-item__start-detail {
-    color: $crimson;
+    color: $resourcesColor;
   }
 
   .comp-area-3 .active, .comp-area-3 .active .mdc-list-item__start-detail {
-    color: $blue;
+    color: $introActionColor;
     font-weight:500;
   }
 

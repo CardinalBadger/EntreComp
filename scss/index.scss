@@ -1,6 +1,7 @@
 @import "config/colors";
 
-$icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
+// $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
+//$icon-font-path: '~bootstrap/assets/fonts/bootstrap/';
 $brand-primary: $blue;
 $link-color: white;
 $font-family-sans-serif: Roboto, sans-serif;
@@ -13,10 +14,19 @@ $navbar-default-border: transparent;
 
 $font-size-base: 16px;
 
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+// @import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@import "~bootstrap/dist/css/bootstrap.css";
 
 .navbar {
   margin-bottom: 0;
+}
+
+.navbar-brand {
+  font-size: 2.5rem;
+  padding: 15px;
+}
+.nav-link {
+  font-size: 2rem;
 }
 
 .section {
@@ -50,7 +60,7 @@ $font-size-base: 16px;
 }
 
 #competences {
-  background-color: lighten($crimson, 40%);
+  background-color: lighten($resourcesColor, 40%);
 }
 
 #intro {

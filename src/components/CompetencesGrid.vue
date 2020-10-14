@@ -95,15 +95,15 @@
   }
 
   .comp-area-1 {
-    background-color: $dark-blue;
+    background-color: $ideasAndOpportunitiesColor;
   }
 
   .comp-area-2 {
-    background-color: $crimson;
+    background-color: $resourcesColor;
   }
 
   .comp-area-3 {
-    background-color: $blue;
+    background-color: $introActionColor;
   }
 
   .comp-area-filters {

@@ -76,7 +76,7 @@ export class IntoAction {
           new SkillLevel(3, 'I can create an action plan which identifies the necessary steps to achieve my goals.', Levels.level3),
           new SkillLevel(4, 'I can allow for the possibility of changes to my plans.', Levels.level4),
           new SkillLevel(5, 'I can summarise the basics of project management.', Levels.level5),
-          new SkillLevel(6, 'I can apply the basics of project management in managing a value-creating activity. ', Levels.level6),
+          new SkillLevel(6, 'I can apply the basics of project management in managing a value-creating activity. .', Levels.level6),
           new SkillLevel(7, 'I can develop and stick to a detailed project management plan, adjusting to changing circumstances to make sure goals are reached.', Levels.level7),
           new SkillLevel(8, 'I can design managerial procedures to effectively deliver value in challenging circumstances.', Levels.level8)
         ])
@@ -132,7 +132,7 @@ export class IntoAction {
           new SkillLevel(2, 'I can confront and deal with changes in a constructive way.', Levels.level2),
           new SkillLevel(3, 'I can change my plans based on the needs of my team.', Levels.level3),
           new SkillLevel(4, 'I can adapt my plans to achieve my goals in light of changes that are outside my control.', Levels.level4),
-          new SkillLevel(5, 'I can embrace change that brings new opportunities for value creation', Levels.level5),
+          new SkillLevel(5, 'I can embrace change that brings new opportunities for value creation.', Levels.level5),
           new SkillLevel(6, 'I can anticipate and include change along the valuecreating process.', Levels.level6),
           new SkillLevel(7, 'I can use the results of monitoring to adjust vision, aims, priorities, resource planning, action steps or any other aspect of the valuecreating process.', Levels.level7),
           new SkillLevel(8, 'I can communicate effectively to the organisation the reason for changes and adjustments.', Levels.level8),
@@ -153,7 +153,7 @@ export class IntoAction {
           new SkillLevel(3, 'I can discuss the role that information plays in reducing uncertainty, ambiguity and risk.', Levels.level3),
           new SkillLevel(4, 'I can actively look for, compare and contrast different sources of information that help me reduce ambiguity, uncertainty, and risks in making decisions.', Levels.level4),
           new SkillLevel(5, 'I can find ways of making decisions when the information is incomplete.', Levels.level5),
-          new SkillLevel(6, 'I can pull together different viewpoints to take informed decisions when the degree of uncertainty is high', Levels.level6),
+          new SkillLevel(6, 'I can pull together different viewpoints to take informed decisions when the degree of uncertainty is high.', Levels.level6),
           new SkillLevel(7, 'I can make decisions evaluating the different elements in a situation that is uncertain and ambiguous.', Levels.level7),
           new SkillLevel(8, 'I can set up appropriate strategies for collecting and monitoring data, which help me take decisions based on sound evidence.', Levels.level8)
         ]
@@ -315,7 +315,7 @@ export class IntoAction {
         [
           new SkillLevel(1, 'I can recognise what I have learnt from taking part in value creating activities.', Levels.level1),
           new SkillLevel(2, 'I can reflect on my experience in taking part in value creating activities and learn from it.', Levels.level2),
-          new SkillLevel(3, 'I can reflect on my interaction with others (including peers and mentors) and learn from it', Levels.level3),
+          new SkillLevel(3, 'I can reflect on my interaction with others (including peers and mentors) and learn from it.', Levels.level3),
           new SkillLevel(4, 'I can filter the feedback provided by others and keep the good from it.', Levels.level4),
           new SkillLevel(5, 'I can integrate lifelong learning into my personal development strategy and career progress.', Levels.level5),
           new SkillLevel(6, 'I can help others reflect on their interaction with other people and help them learn from this interaction.', Levels.level6),

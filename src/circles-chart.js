@@ -99,7 +99,7 @@ export default class CirclesChart {
 
 // configuration constant variables
 const colorsForAreas = [styles.ideasAndOpportunitiesColor, styles.resourcesColor, styles.introActionColor]
-const groupSelectionOutlineColor = '#30415d' // $blue
+const groupSelectionOutlineColor = '#ececec' // $gray
 const groupSelectionColor = getRGBAString('#000000', 0.15)
 
 /**
