@@ -1,5 +1,5 @@
+@import "~bootstrap/dist/css/bootstrap.css";
 @import "~material-components-web/dist/material-components-web.css";
-
 /* Ensure layout covers the entire screen. */
 html {
   height: 100%;
@@ -14,6 +14,19 @@ html {
   box-sizing: border-box;
   height: 100%;
   width: 100%;
+}
+
+.cell-icon {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  vertical-align: middle;
+  font-size: 5rem;
+}
+
+tbody.collapse.in {
+  display: table-row-group;
 }
 
 $menu-width:350px;

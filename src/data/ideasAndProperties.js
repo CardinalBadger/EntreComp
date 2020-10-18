@@ -75,8 +75,8 @@ export class IdeasAndProperties {
           new SkillLevel(4, 'I can actively search for new solutions that meet my needs.', Levels.level4),
           new SkillLevel(5, 'I can actively search for new solutions that improve the value creating process.', Levels.level5),
           new SkillLevel(6, 'I can combine my understanding of different contexts to transfer knowledge, ideas and solutions across different areas.', Levels.level6),
-          null,
-          null,
+          new SkillLevel(7, '', Levels.level7),
+          new SkillLevel(8, '', Levels.level8),
         ]
       ),
       new Skill(
@@ -157,8 +157,8 @@ export class IdeasAndProperties {
         2,
         'Think strategically',
         [
-          null,
-          null,
+          new SkillLevel(1, '', Levels.level1),
+          new SkillLevel(2, '', Levels.level2),
           new SkillLevel(3, 'I can explain what a vision is and what purpose it serves.', Levels.level3),
           new SkillLevel(4, 'I am aware of what is needed to build a vision.', Levels.level4),
           new SkillLevel(5, 'I can explain the role of a vision statement for strategic planning.', Levels.level5),
@@ -171,8 +171,8 @@ export class IdeasAndProperties {
         3,
         'Guide action',
         [
-          null,
-          null,
+          new SkillLevel(1, '', Levels.level1),
+          new SkillLevel(2, '', Levels.level2),
           new SkillLevel(3, 'My vision for creating value drives me to make the effort to turn ideas into action.', Levels.level3),
           new SkillLevel(4, 'I can decide what type of vision for creating value I would like to contribute to.', Levels.level4),
           new SkillLevel(5, 'I can identify the changes needed to achieve my vision.', Levels.level5),
@@ -263,9 +263,9 @@ export class IdeasAndProperties {
         4,
         'Be accountable',
         [
-          null,
-          null,
-          null,
+          new SkillLevel(1, '', Levels.level1),
+          new SkillLevel(2, '', Levels.level2),
+          new SkillLevel(3, '', Levels.level3),
           new SkillLevel(4, 'I can tell the difference between accounting for use of resources and accounting for the impact of my value creating activity on stakeholders and the environment.', Levels.level4),
           new SkillLevel(5, 'I can tell the difference between input, output, outcomes and impact.', Levels.level5),
           new SkillLevel(6, 'I can discuss a range of accountability methods for both functional and strategic accountability.', Levels.level6),

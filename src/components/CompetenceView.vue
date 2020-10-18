@@ -17,29 +17,62 @@
     <main class="competence-main">
       <h1 class="mdc-typography--display1 color ">{{competence.name}}</h1>
       <h2 class="mdc-typography--title ">{{competence.hint}}</h2>
-
-
+      <p>
+        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+          Link with href
+        </a>
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          Button with data-target
+        </button>
+      </p>
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+        </div>
+      </div>
       <div class="mdc-layout-grid skills-container">
         <div class="mdc-layout-grid__inner">
-          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
             <div class="skills bl-color">
               <h1>Required skills </h1>
               <ul>
-                <li class="color" v-for="skill in competence.skills">{{skill.name}}{{skill.levels}}</li>
+                <li class="color" v-for="skill in competence.skills">{{skill.name}}</li>
               </ul>
             </div>
             <div style="color:#757575;" class="mdc-typography--body1">
               Mastering these skills gives you the ability to:<br>
               <div v-for="(descr,index) in competence.descriptors"
                    class="mdc-typography--body1"> {{index + 1}}) {{descr}}
-
               </div>
             </div>
+            <table class="table table-bordered mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+              <thead class="clickable" data-toggle="collapse" data-target="#progression-model" aria-expanded="false" aria-controls="progression-model">
+                <tr>
+                  <th class="text-center">THREAD</th>
+                  <td class="text-center" scope="col" colspan="2" v-for="(category, index) in progressionCategories" :class="levelBGColor[index*2]" data-toggle="tooltip" data-placement="top" title="Click here to see detail."><p class="text-uppercase"><strong>{{category.title}}</strong></p>{{category.description}}</td>
+                </tr>
+              </thead>
+              <tbody id="progression-model" class="collapse">
+                <tr>
+                  <th rowspan="2"></th>
+                  <td scope="col" class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1" v-for="(level, index) in progressionLevels" :class="levelBGColor[index]">{{level.name}}</td>
+                </tr>
+                <tr>
+                  <td scope="col" v-for="(level, index) in progressionLevels" :class="levelBGColor[index]"><strong>{{level.level}}. {{level.action}}</strong><br/>{{level.levelDescription}}</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr v-for="skill in competence.skills">
+                  <th scope="row" style="width: 10%">{{skill.name}}</th>
+                  <td style="width: 11.25%" v-for="(level,index) in skill.levels"  :class="levelBGColor[index]">{{level.name}}<i aria-hidden="true" class="material-icons arrow cell-icon" v-if="level.name ===''">arrow_right_alt</i></td>
+                </tr>
+              </tbody>
+            </table>
             <a id="assess-tool" href="javascript:void(0)" class="mdc-button mdc-button--unelevated mdc-ripple-upgraded">
               Assess yourself
              </a>
           </div>
-          <div id="competences-chart-container" class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6"></div>
+          <!-- <div id="competences-chart-container" class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6"></div> -->
         </div>
       </div>
 
@@ -83,6 +116,7 @@
   import footer from './CompetencesFooter.vue'
   import CirclesChart from '../circles-chart.js'
   import {MDCDialog} from '@material/dialog';
+  import {progressionCategories, progressionLevels} from '../data/progressionModelCategories.js';
 
   let circlesChart = new CirclesChart('competences-chart-container');
 
@@ -95,7 +129,10 @@
       return {
         competence: null,
         competenceArea: null,
-        menuIsOpened: true
+        progressionCategories: null,
+        progressionLevels: null,
+        menuIsOpened: true,
+        levelBGColor: ['foundation','foundation','intermediate','intermediate','advanced','advanced','expert','expert']
       }
     },
     methods: {
@@ -120,6 +157,8 @@
       let urlInfo = this.findCompetenceFromUrl();
       this.competence = urlInfo.competence;
       this.competenceArea = urlInfo.competenceArea;
+      this.progressionCategories = progressionCategories;
+      this.progressionLevels = progressionLevels;
 
       eventBus.$on("MDCPersistentDrawer:open", () => {
         this.menuIsOpened = true;
@@ -203,7 +242,18 @@
     .bl-color {
       border-left-color: $ideasAndOpportunitiesColor;
     }
-
+    .foundation {
+      background-color: #E6ECEE;
+    }
+    .intermediate {
+      background-color: #BFCED2;
+    }
+    .advanced {
+      background-color: #9AB6BB;
+    }
+    .expert {
+      background-color: #78A0A7;
+    }
   }
 
   .comp-area-2 {
@@ -215,6 +265,18 @@
     }
     .bl-color {
       border-left-color: $resourcesColor;
+    }
+    .foundation {
+      background-color: #FBEBDF;
+    }
+    .intermediate {
+      background-color: #F3CCAE;
+    }
+    .advanced {
+      background-color: #EBAE82;
+    }
+    .expert {
+      background-color: #E4925B;
     }
   }
 
@@ -228,6 +290,17 @@
     .bl-color {
       border-left-color: $introActionColor;
     }
-
+    .foundation {
+      background-color: #EDF3E7;
+    }
+    .intermediate {
+      background-color: #D3E1C1;
+    }
+    .advanced {
+      background-color: #B8D09C;
+    }
+    .expert {
+      background-color: #9EC27A;
+    }
   }
 </style>

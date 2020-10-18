@@ -15,22 +15,22 @@ export class Resources {
           new SkillLevel(4, 'I can reflect on my individual and group needs, wants, interests and aspirations in relation to opportunities and future prospects.', Levels.level4),
           new SkillLevel(5, 'I can translate my needs, wants, interests and aspirations into goals that help me reach them.', Levels.level5),
           new SkillLevel(6, 'I can help others to reflect on their needs, wants, interests and aspirations and how they can turn these into goals.', Levels.level6),
-          null,
-          null
+          new SkillLevel(7, '', Levels.level7),
+          new SkillLevel(8, '', Levels.level8)
         ]
       ),
       new Skill(
         2,
         'Identify your strengths and weaknesses',
         [
-          null,
+          new SkillLevel(1, '', Levels.level1),
           new SkillLevel(2, 'I can identify things I am good at and things I am not good at.', Levels.level2),
           new SkillLevel(3, 'I can judge my strengths and weaknesses and those of others in relation to opportunities for creating value.', Levels.level3),
           new SkillLevel(4, 'I am driven by the desire to use my strengths and abilities to make the most of opportunities to create value.', Levels.level4),
           new SkillLevel(5, 'I can team up with others to compensate for our weaknesses and add to our strengths.', Levels.level5),
           new SkillLevel(6, 'I can help others identify their strengths and weaknesses.', Levels.level6),
-          null,
-          null
+          new SkillLevel(7, '', Levels.level7),
+          new SkillLevel(8, '', Levels.level8)
         ]
       ),
       new Skill(
@@ -43,8 +43,8 @@ export class Resources {
           new SkillLevel(4, 'I believe I can influence people and situations for the better.', Levels.level4),
           new SkillLevel(5, 'I believe in my ability to carry out what I have imagined and planned, despite obstacles, limited resources and resistance from others.', Levels.level5),
           new SkillLevel(6, 'I believe in my ability to understand and take the good out of experiences that others may label as failures.', Levels.level6),
-          null,
-          null
+          new SkillLevel(7, '', Levels.level7),
+          new SkillLevel(8, '', Levels.level8)
 
         ]
       ),
@@ -76,10 +76,10 @@ export class Resources {
           new SkillLevel(2, 'I am motivated by the idea of creating value for myself and others.', Levels.level2),
           new SkillLevel(3, 'I can anticipate the feeling of achieving my goals and this motivates me.', Levels.level3),
           new SkillLevel(4, 'I can regulate my own behaviour to stay driven and achieve the benefits of turning ideas into action.', Levels.level4),
-          null,
-          null,
-          null,
-          null
+          new SkillLevel(5, '', Levels.level5),
+          new SkillLevel(6, '', Levels.level6),
+          new SkillLevel(7, '', Levels.level7),
+          new SkillLevel(8, '', Levels.level8)
         ]
       ),
       new Skill(
@@ -101,6 +101,7 @@ export class Resources {
         'Focus on what keeps you motivated',
         [
           new SkillLevel(1, 'I can recognise different ways of motivating myself and others to create value.', Levels.level1),
+          new SkillLevel(2, '', Levels.level2),
           new SkillLevel(3, 'I can reflect on the social incentives associated with having a sense of initiative and creating value for myself and others.', Levels.level3),
           new SkillLevel(4, 'I can tell the difference between personal and external factors that motivate me or others when creating value.', Levels.level4),
           new SkillLevel(5, 'I can use strategies to stay motivated (for example, set goals, monitor performance and evaluate my progress).', Levels.level5),
@@ -135,7 +136,7 @@ export class Resources {
           new SkillLevel(5, 'I can celebrate short-term achievements, in order to stay motivated.', Levels.level5),
           new SkillLevel(6, 'I can inspire others to work hard on their goals by showing passion and a strong sense of ownership.', Levels.level6),
           new SkillLevel(7, 'I can stay focused on my vision and goals, despite challenges.', Levels.level7),
-          null
+          new SkillLevel(8, '', Levels.level8)
         ]
       )
     ]
@@ -256,11 +257,12 @@ export class Resources {
         [
           new SkillLevel(1, 'I can outline the purpose of taxation.', Levels.level1),
           new SkillLevel(2, 'I can explain how taxation finances the activities of a country and its part in providing public goods and services.', Levels.level2),
+          new SkillLevel(3, '', Levels.level3),
           new SkillLevel(4, 'I can estimate the main accountancy and tax obligations I need to fulfil to meet the tax requirements for my activities.', Levels.level4),
           new SkillLevel(5, 'I can estimate how my financial decisions (investments, buying assets, goods and so on) affect my tax.', Levels.level5),
           new SkillLevel(6, 'I can make financial decisions based on current taxation schemes.', Levels.level6),
           new SkillLevel(7, 'I can make financial decisions based on taxation schemes of different countries and territories.', Levels.level7),
-          null
+          new SkillLevel(8, '', Levels.level8)
         ]
       )
     ]
@@ -287,7 +289,7 @@ export class Resources {
         10,
         'Persuade',
         [
-          null,
+          new SkillLevel(1, '', Levels.level1),
           new SkillLevel(2, 'I can persuade others by providing a number of arguments.', Levels.level2),
           new SkillLevel(3, 'I can persuade others by providing evidence for my arguments.', Levels.level3),
           new SkillLevel(4, 'I can persuade others by appealing to their emotions.', Levels.level4),

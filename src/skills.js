@@ -1,5 +1,6 @@
 import '../scss/skills.scss'
 import Vue from 'vue'
+import 'bootstrap'
 import * as mdc from  '@material/drawer'
 import CompentencesMenu from './components/CompetencesMenu.vue'
 import CompentenceView from './components/CompetenceView.vue'

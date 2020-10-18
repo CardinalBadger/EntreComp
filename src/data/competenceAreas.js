@@ -3,7 +3,6 @@ import {Competence} from '../model/competence.js';
 import {IdeasAndProperties} from "./ideasAndProperties";
 import {Resources} from "./resources.js";
 import {IntoAction} from "./intoAction";
-
 const competenceArea1 =new CompetenceArea(
   1,
   "IDEAS & OPPORTUNITIES",
