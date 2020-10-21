@@ -7,7 +7,7 @@ const disableExtractTextPlugin = process.env.NODE_ENV !== 'production';
 module.exports = {
   entry: {
     index:'./src/index.js',
-    skills:'./src/skills.js'
+    competences:'./src/competences.js'
   },
   output: {
     path: path.resolve(__dirname, './dist'),

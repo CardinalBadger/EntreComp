@@ -18,16 +18,16 @@
     </div>
     <div class="row">
       <template v-for="compArea in filteredCompetencesAreas">
-        <div v-for="comp in compArea.competences" class="col-md-4">
+        <div v-for="competence in compArea.competences" class="col-md-4">
           <div class="mdc-card " v-bind:class="'comp-area-'+compArea.id">
             <section class="mdc-card__primary">
-              <h1 class="mdc-card__title mdc-card__title--large">{{comp.name}}</h1>
+              <h1 class="mdc-card__title mdc-card__title--large">{{competence.name}}</h1>
             </section>
             <section class="mdc-card__supporting-text">
-              {{comp.hint}}
+              {{competence.hint}}
            </section>
             <section class="mdc-card__actions">
-              <a class="mdc-button mdc-button--compact mdc-card__action" v-bind:href="'skills.html#competence='+comp.id">VIEW {{comp.skills.length}} SKILLS</a>
+              <a class="mdc-button mdc-button--compact mdc-card__action" v-bind:href="'competences.html#competence='+competence.id">VIEW {{competence.threads.length}} THREADS</a>
             </section>
           </div>
         </div>
@@ -125,7 +125,7 @@
   }
 
   .comp-area-filter:active, .comp-area-filter:hover, .comp-area-filter.active {
-    background-color: $light-blue;
+    background-color: $blue;
     text-decoration: none;
     color: white;
   }

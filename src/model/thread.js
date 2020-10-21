@@ -1,4 +1,4 @@
-export class Skill {
+export class Thread {
   constructor(id, name, levels) {
     this.id = id;
     this.name = name;

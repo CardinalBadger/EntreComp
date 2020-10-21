@@ -1,4 +1,4 @@
-import '../scss/skills.scss'
+import '../scss/competences.scss'
 import Vue from 'vue'
 import 'bootstrap'
 import * as mdc from  '@material/drawer'

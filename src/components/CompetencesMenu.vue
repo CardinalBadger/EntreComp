@@ -1,7 +1,7 @@
 <template>
   <div class="mdc-list-group">
     <template v-for="compArea in competencesAreas">
-      <h3 class="mdc-list-group__subheader">{{compArea.name}}</h3>
+      <h3 :class="'mdc-list-group__subheader comp-area-'+compArea.id">{{compArea.name}}</h3>
       <ul class="mdc-list" :class="'comp-area-'+compArea.id">
         <li v-for="comp in compArea.competences"
             class="mdc-list-item"

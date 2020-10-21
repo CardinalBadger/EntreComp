@@ -2,18 +2,18 @@
 
 ## The vision
  
- There is a growing awareness that entrepreneurial skills, knowledge and attitudes can be
+ There is a growing awareness that entrepreneurial competences, knowledge and attitudes can be
  learned and in turn lead to the widespread development of entrepreneurial mind-sets
  and culture, which benefit individuals and society as a whole.
  
  The vision is this project is to:
- - Create an online way to help people understand that entrepreneurship can be learned and broken down into a set of competences/skills. 
- - Help entrepreneurs evolve their entrepreneurship skills
+ - Create an online way to help people understand that entrepreneurship can be learned and broken down into a set of competences.
+ - Help entrepreneurs evolve their entrepreneurship competences
 
 ## Attributions
 
  This project is based on [EntreComp into Action - Get inspired, make it happen: A user guide to the European Entrepreneurship Competence Framework](https://ec.europa.eu/jrc/en/publication/eur-scientific-and-technical-research-reports/entrecomp-action-get-inspired-make-it-happen-user-guide-european-entrepreneurship-competence)
- that was released at 2018 at EU SCIENCE HUB  
+ that was released at 2018 at EU SCIENCE HUB
 
 ## Build Setup
 

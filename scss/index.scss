@@ -67,13 +67,13 @@ $font-size-base: 16px;
 #intro {
   height: 550px;
 
-  color: #fff;
+  color: #333;
   background-color: gray;
-  background-image: url('../src/assets/background_cover2.jpg');
+  background-image: url('../src/assets/background_cover2_1280.jpg');
 
   background-repeat: no-repeat;
   @media (min-width: 1200px) {
-    background-position: center -190px;
+    background-position: center center;
   }
   background-size: cover;
 
@@ -92,7 +92,7 @@ $font-size-base: 16px;
 
   @media (max-width: 900px) {
     height: 330px;
-    background-image: url('../src/assets/background_cover4.jpg');
+    background-image: url('../src/assets/background_cover2_640.jpg');
     .section {
       padding-top: 50px;
     }
@@ -115,9 +115,16 @@ $font-size-base: 16px;
 
 #roadmap {
 
-  background-color: lighten($blue, 20%);
+  background-color: lighten($blue, 10%);
   color: white;
   font-size: 18px;
+  a:link, a:visited {
+    color: white;
+    cursor: pointer;
+  }
+  a:hover, a:active {
+    font-weight: 700;
+  }
 }
 
 footer {

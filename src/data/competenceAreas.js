@@ -16,7 +16,7 @@ const competenceArea1 =new CompetenceArea(
         "Identify needs and challenges that need to be met.",
         "Establish new connections and bring together scattered elements of the landscape to create opportunities to create value."
       ],
-      IdeasAndProperties.mapSpottingOpportunitiesSkills()
+      IdeasAndProperties.mapSpottingOpportunities()
     ),
     new Competence(
       2,
@@ -27,7 +27,7 @@ const competenceArea1 =new CompetenceArea(
         "Explore and experiment with innovative approaches.",
         "Combine knowledge and resources to achieve valuable effects."
       ],
-      IdeasAndProperties.mapCreativitySkills()
+      IdeasAndProperties.mapCreativity()
     ),
     new Competence(
       3,
@@ -38,7 +38,7 @@ const competenceArea1 =new CompetenceArea(
         "Develop a vision to turn ideas into action.",
         "Visualise future scenarios to help guide effort and action."
       ],
-      IdeasAndProperties.mapVisionSkills()
+      IdeasAndProperties.mapVision()
     ),
     new Competence(
       4,
@@ -48,7 +48,7 @@ const competenceArea1 =new CompetenceArea(
         "Judge what value is in social, cultural and economic terms.",
         "Recognise the potential an idea has for creating value and identify suitable ways of making the most out of it."
       ],
-      IdeasAndProperties.mapValuingIdeasSkills()
+      IdeasAndProperties.mapValuingIdeas()
     ),
     new Competence(
       5,
@@ -59,7 +59,7 @@ const competenceArea1 =new CompetenceArea(
         "Reflect on how sustainable long-term social,cultural and economic goals are, and the course of action chosen.",
         "Act responsibly."
       ],
-      IdeasAndProperties.mapEthicalAndSustainableThinkingSkills()
+      IdeasAndProperties.mapEthicalAndSustainableThinking()
     )
   ]
 );

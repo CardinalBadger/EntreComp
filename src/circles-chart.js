@@ -39,7 +39,7 @@ export default class CirclesChart {
       onGroupClick: function (info) {
         //  alert(`You clicked the group entitled '${info.group.label}' (id: ${info.group.id}, type: ${info.group.type})`)
         if (info.group.type==="competence")
-          window.location.href = "skills.html#competence="+info.group.id;
+          window.location.href = "competences.html#competence="+info.group.id;
       }
     })
 
@@ -140,11 +140,11 @@ function formatCompetenciesToGroups() {
   for (let i = 0; i < competenceAreas.length; i++) { // competence areas
     let competencesGroups = []
     for (let j = 0; j < competenceAreas[i].competences.length; j++) { // competenceAreas
-      let skillsGroups = []
-      // for (let k = 0; k < competenceAreas[i].competenceAreas[j].skills.length; k++) { // skills
-      //   skillsGroups.push({id: competenceAreas[i].competenceAreas[j].skills[k].id, type: 'skill', label: competenceAreas[i].competenceAreas[j].skills[k].name, gcolor: colorsForAreas[i]})
+      let threadsGroups = []
+      // for (let k = 0; k < competenceAreas[i].competenceAreas[j].competences.length; k++) { // competences
+      //   competencesGroups.push({id: competenceAreas[i].competenceAreas[j].competences[k].id, type: 'competence', label: competenceAreas[i].competenceAreas[j].competences[k].name, gcolor: colorsForAreas[i]})
       // }
-      competencesGroups.push({id: 'competence_' + competenceAreas[i].competences[j].id, type: 'competence', label: competenceAreas[i].competences[j].name, gcolor: colorsForAreas[i], groups: skillsGroups})
+      competencesGroups.push({id: 'competence_' + competenceAreas[i].competences[j].id, type: 'competence', label: competenceAreas[i].competences[j].name, gcolor: colorsForAreas[i], groups: threadsGroups})
     }
     competenceAreasGroups.push({id: 'competence_area_' + competenceAreas[i].id, type: 'competence_area', label: competenceAreas[i].name, gcolor: colorsForAreas[i], groups: competencesGroups})
   }

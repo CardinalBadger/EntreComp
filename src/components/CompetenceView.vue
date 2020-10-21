@@ -17,44 +17,25 @@
     <main class="competence-main">
       <h1 class="mdc-typography--display1 color ">{{competence.name}}</h1>
       <h2 class="mdc-typography--title ">{{competence.hint}}</h2>
-      <p>
-        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-          Link with href
-        </a>
-        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-          Button with data-target
-        </button>
-      </p>
-      <div class="collapse" id="collapseExample">
-        <div class="card card-body">
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-        </div>
-      </div>
-      <div class="mdc-layout-grid skills-container">
+      <div class="mdc-layout-grid competences-container">
         <div class="mdc-layout-grid__inner">
           <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-            <div class="skills bl-color">
-              <h1>Required skills </h1>
+            <div class="competences bl-color">
+              <h1>Descriptior </h1>
               <ul>
-                <li class="color" v-for="skill in competence.skills">{{skill.name}}</li>
+                <li class="color" v-for="descriptor in competence.descriptors">&#183; {{descriptor}}</li>
               </ul>
             </div>
-            <div style="color:#757575;" class="mdc-typography--body1">
-              Mastering these skills gives you the ability to:<br>
-              <div v-for="(descr,index) in competence.descriptors"
-                   class="mdc-typography--body1"> {{index + 1}}) {{descr}}
-              </div>
-            </div>
             <table class="table table-bordered mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-              <thead class="clickable" data-toggle="collapse" data-target="#progression-model" aria-expanded="false" aria-controls="progression-model">
+              <thead v-model="collapse" v-on:click="collapse = !collapse" lass="clickable" data-toggle="collapse" data-target="#progression-model" aria-expanded="false" aria-controls="progression-model">
                 <tr>
-                  <th class="text-center">THREAD</th>
+                  <th class="text-center"><p>THREAD</p><i aria-hidden="true" class="collapse-icon material-icons arrow"><span v-if="collapse">unfold_more</span><span v-else>unfold_less</span></i></th>
                   <td class="text-center" scope="col" colspan="2" v-for="(category, index) in progressionCategories" :class="levelBGColor[index*2]" data-toggle="tooltip" data-placement="top" title="Click here to see detail."><p class="text-uppercase"><strong>{{category.title}}</strong></p>{{category.description}}</td>
                 </tr>
               </thead>
               <tbody id="progression-model" class="collapse">
                 <tr>
-                  <th rowspan="2"></th>
+                  <th rowspan="2">PROGRESSION MODEL</th>
                   <td scope="col" class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1" v-for="(level, index) in progressionLevels" :class="levelBGColor[index]">{{level.name}}</td>
                 </tr>
                 <tr>
@@ -62,49 +43,16 @@
                 </tr>
               </tbody>
               <tbody>
-                <tr v-for="skill in competence.skills">
-                  <th scope="row" style="width: 10%">{{skill.name}}</th>
-                  <td style="width: 11.25%" v-for="(level,index) in skill.levels"  :class="levelBGColor[index]">{{level.name}}<i aria-hidden="true" class="material-icons arrow cell-icon" v-if="level.name ===''">arrow_right_alt</i></td>
+                <tr v-for="competence in competence.threads">
+                  <th scope="row" style="width: 10%">{{competence.name}}</th>
+                  <td style="width: 11.25%" v-for="(level,index) in competence.levels"  :class="levelBGColor[index]">{{level.name}}<i aria-hidden="true" class="material-icons arrow cell-icon" v-if="level.name ===''">arrow_right_alt</i></td>
                 </tr>
               </tbody>
             </table>
-            <a id="assess-tool" href="javascript:void(0)" class="mdc-button mdc-button--unelevated mdc-ripple-upgraded">
-              Assess yourself
-             </a>
           </div>
           <!-- <div id="competences-chart-container" class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6"></div> -->
         </div>
       </div>
-
-      <aside id="mdc-dialog"
-             class="mdc-dialog"
-             role="alertdialog"
-             aria-labelledby="mdc-dialog-with-list-label"
-             aria-describedby="mdc-dialog-with-list-description">
-        <div class="mdc-dialog__surface">
-          <header class="mdc-dialog__header">
-            <h2 id="mdc-dialog-default-label" class="mdc-dialog__header__title">
-              Coming Soon!
-            </h2>
-          </header>
-          <section id="mdc-dialog-default-description" class="mdc-dialog__body">
-            Thanks for your patience.
-
-
-          </section>
-          <footer class="mdc-dialog__footer">
-            <button type="button"
-                    class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--cancel mdc-ripple-upgraded"
-                    style="--mdc-ripple-fg-size:53.03999633789062px; --mdc-ripple-fg-scale:1.9881081289759257;">Close
-
-
-            </button>
-          </footer>
-        </div>
-        <div class="mdc-dialog__backdrop"></div>
-      </aside>
-
-
     </main>
     <comp-footer v-bind:competence="competence" v-bind:competence-area="competenceArea"></comp-footer>
   </div>
@@ -127,6 +75,7 @@
     },
     data () {
       return {
+        collapse: true,
         competence: null,
         competenceArea: null,
         progressionCategories: null,
@@ -136,6 +85,10 @@
       }
     },
     methods: {
+      clickMenu()
+      {
+        eventBus.$emit('toggle-menu');
+      },
       clickMenu()
       {
         eventBus.$emit('toggle-menu');
@@ -184,7 +137,7 @@
 <style lang="scss" scoped>
   @import "../../scss/config/colors";
 
-  .skills-container {
+  .competences-container {
     padding: 0;
   }
 
@@ -195,9 +148,18 @@
     min-height: 56px;
   }
 
+  #progression-model {
+    border-top: 2px double black;
+    border-bottom: 2px double black;
+  }
+
+  .collapse-icon {
+    font-size: 1.5em;
+    margin-top: -0.1em;
+  }
 
 
-  .skills {
+  .competences {
     border-left: 5px solid;
     padding-left: 20px;
     margin-top: 20px;
