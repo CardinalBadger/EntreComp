@@ -57,7 +57,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/dist/";
+/******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 44);
@@ -50699,6 +50699,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
 
 
 
@@ -50707,7 +50709,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-var circlesChart = new __WEBPACK_IMPORTED_MODULE_3__circles_chart_js__["a" /* default */]('competences-chart-container');
+// let circlesChart = new CirclesChart('competences-chart-container'); // remove Circle Chart
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   mixins: [__WEBPACK_IMPORTED_MODULE_1__mixIns_extractCompetencesFromUrlMixin_js__["a" /* default */]],
@@ -50734,15 +50736,16 @@ var circlesChart = new __WEBPACK_IMPORTED_MODULE_3__circles_chart_js__["a" /* de
     __WEBPACK_IMPORTED_MODULE_0__eventBus_eventBus_js__["a" /* default */].$emit('toggle-menu');
   }),
   mounted: function mounted() {
-    console.log("view is mounted");
-    circlesChart.drawChart();
-    circlesChart.select(this.competence.id, 'competence'); // select only competences and not areas
+    // Remove Circle chart
+    // console.log("view is mounted");
+    // circlesChart.drawChart();
+    // circlesChart.select(this.competence.id, 'competence'); // select only competences and not areas
 
-    var dialog = new __WEBPACK_IMPORTED_MODULE_4__material_dialog__["a" /* MDCDialog */](document.querySelector('#mdc-dialog'));
-    document.querySelector('#assess-tool').addEventListener('click', function (evt) {
-      dialog.lastFocusedTarget = evt.target;
-      dialog.show();
-    });
+    // const dialog = new MDCDialog(document.querySelector('#mdc-dialog'));
+    // document.querySelector('#assess-tool').addEventListener('click', function (evt) {
+    //   dialog.lastFocusedTarget = evt.target;
+    //   dialog.show();
+    // });
   },
   created: function created() {
     var _this = this;
@@ -50753,22 +50756,22 @@ var circlesChart = new __WEBPACK_IMPORTED_MODULE_3__circles_chart_js__["a" /* de
     this.progressionCategories = __WEBPACK_IMPORTED_MODULE_5__data_progressionModelCategories_js__["i" /* progressionCategories */];
     this.progressionLevels = __WEBPACK_IMPORTED_MODULE_5__data_progressionModelCategories_js__["j" /* progressionLevels */];
 
-    __WEBPACK_IMPORTED_MODULE_0__eventBus_eventBus_js__["a" /* default */].$on("MDCPersistentDrawer:open", function () {
-      _this.menuIsOpened = true;
-      setTimeout(function () {
-        circlesChart.resizeChart();
-      }, 50);
-    });
-    __WEBPACK_IMPORTED_MODULE_0__eventBus_eventBus_js__["a" /* default */].$on("MDCPersistentDrawer:close", function () {
-      _this.menuIsOpened = false;
-      setTimeout(function () {
-        circlesChart.resizeChart();
-      }, 50);
-    });
+    // eventBus.$on("MDCPersistentDrawer:open", () => {
+    //   this.menuIsOpened = true;
+    //   setTimeout(function() {
+    //     circlesChart.resizeChart()
+    //   }, 50)
+    // });
+    // eventBus.$on("MDCPersistentDrawer:close", () => {
+    //   this.menuIsOpened = false;
+    //   setTimeout(function() {
+    //     circlesChart.resizeChart()
+    //   }, 50)
+    // });
     __WEBPACK_IMPORTED_MODULE_0__eventBus_eventBus_js__["a" /* default */].$on("competence-changed", function (comp) {
       _this.competence = comp;
       _this.competenceArea = _this.findCompetenceAreaByCompetence(comp);
-      circlesChart.select(comp.id, 'competence'); // select only competences and not areas
+      // circlesChart.select(comp.id, 'competence'); // select only competences and not areas
     });
   }
 });
@@ -52016,7 +52019,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_CompetenceView_vue__ = __webpack_require__(35);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_d19286c8_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_CompetenceView_vue__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_5b6c42db_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_CompetenceView_vue__ = __webpack_require__(72);
 function injectStyle (ssrContext) {
   __webpack_require__(59)
 }
@@ -52031,12 +52034,12 @@ var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-d19286c8"
+var __vue_scopeId__ = "data-v-5b6c42db"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_CompetenceView_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_d19286c8_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_CompetenceView_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_5b6c42db_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_CompetenceView_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -52205,7 +52208,7 @@ class MDCDialog extends __WEBPACK_IMPORTED_MODULE_0__material_base__["a" /* MDCC
     });
   }
 }
-/* harmony export (immutable) */ __webpack_exports__["a"] = MDCDialog;
+/* unused harmony export MDCDialog */
 
 
 
@@ -53581,7 +53584,7 @@ function createIsUnavailable(elementDocument) {
 "use strict";
 var render = function () {
 var _obj;
-var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:( _obj = {}, _obj['comp-area-'+_vm.competenceArea.id] = true, _obj.open = _vm.menuIsOpened, _obj ),attrs:{"id":"competence-breakdown"}},[_c('header',{staticClass:"mdc-toolbar mdc-elevation--z4 bg"},[_c('div',{staticClass:"mdc-toolbar__row"},[_c('section',{staticClass:"mdc-toolbar__section mdc-toolbar__section--align-start"},[_c('button',{staticClass:"demo-menu material-icons mdc-toolbar__menu-icon",on:{"click":function($event){return _vm.clickMenu()}}},[_vm._v("menu")]),_vm._v(" "),_c('span',{staticClass:"mdc-toolbar__title catalog-title"},[_vm._v(_vm._s(_vm.competence.name))])])])]),_vm._v(" "),_c('main',{staticClass:"competence-main"},[_c('h1',{staticClass:"mdc-typography--display1 color "},[_vm._v(_vm._s(_vm.competence.name))]),_vm._v(" "),_c('h2',{staticClass:"mdc-typography--title "},[_vm._v(_vm._s(_vm.competence.hint))]),_vm._v(" "),_c('div',{staticClass:"mdc-layout-grid competences-container"},[_c('div',{staticClass:"mdc-layout-grid__inner"},[_c('div',{staticClass:"mdc-layout-grid__cell mdc-layout-grid__cell--span-12"},[_c('div',{staticClass:"competences bl-color"},[_c('h1',[_vm._v("Descriptior ")]),_vm._v(" "),_c('ul',_vm._l((_vm.competence.descriptors),function(descriptor){return _c('li',{staticClass:"color"},[_vm._v("· "+_vm._s(descriptor))])}),0)]),_vm._v(" "),_c('table',{staticClass:"table table-bordered mdc-layout-grid__cell mdc-layout-grid__cell--span-12"},[_c('thead',{attrs:{"lass":"clickable","data-toggle":"collapse","data-target":"#progression-model","aria-expanded":"false","aria-controls":"progression-model"},on:{"click":function($event){_vm.collapse = !_vm.collapse}},model:{value:(_vm.collapse),callback:function ($$v) {_vm.collapse=$$v},expression:"collapse"}},[_c('tr',[_c('th',{staticClass:"text-center"},[_c('p',[_vm._v("THREAD")]),_c('i',{staticClass:"collapse-icon material-icons arrow",attrs:{"aria-hidden":"true"}},[(_vm.collapse)?_c('span',[_vm._v("unfold_more")]):_c('span',[_vm._v("unfold_less")])])]),_vm._v(" "),_vm._l((_vm.progressionCategories),function(category,index){return _c('td',{staticClass:"text-center",class:_vm.levelBGColor[index*2],attrs:{"scope":"col","colspan":"2","data-toggle":"tooltip","data-placement":"top","title":"Click here to see detail."}},[_c('p',{staticClass:"text-uppercase"},[_c('strong',[_vm._v(_vm._s(category.title))])]),_vm._v(_vm._s(category.description))])})],2)]),_vm._v(" "),_c('tbody',{staticClass:"collapse",attrs:{"id":"progression-model"}},[_c('tr',[_c('th',{attrs:{"rowspan":"2"}},[_vm._v("PROGRESSION MODEL")]),_vm._v(" "),_vm._l((_vm.progressionLevels),function(level,index){return _c('td',{staticClass:"mdc-layout-grid__cell mdc-layout-grid__cell--span-1",class:_vm.levelBGColor[index],attrs:{"scope":"col"}},[_vm._v(_vm._s(level.name))])})],2),_vm._v(" "),_c('tr',_vm._l((_vm.progressionLevels),function(level,index){return _c('td',{class:_vm.levelBGColor[index],attrs:{"scope":"col"}},[_c('strong',[_vm._v(_vm._s(level.level)+". "+_vm._s(level.action))]),_c('br'),_vm._v(_vm._s(level.levelDescription))])}),0)]),_vm._v(" "),_c('tbody',_vm._l((_vm.competence.threads),function(competence){return _c('tr',[_c('th',{staticStyle:{"width":"10%"},attrs:{"scope":"row"}},[_vm._v(_vm._s(competence.name))]),_vm._v(" "),_vm._l((competence.levels),function(level,index){return _c('td',{class:_vm.levelBGColor[index],staticStyle:{"width":"11.25%"}},[_vm._v(_vm._s(level.name)),(level.name ==='')?_c('i',{staticClass:"material-icons arrow cell-icon",attrs:{"aria-hidden":"true"}},[_vm._v("arrow_right_alt")]):_vm._e()])})],2)}),0)])])])])]),_vm._v(" "),_c('comp-footer',{attrs:{"competence":_vm.competence,"competence-area":_vm.competenceArea}})],1)}
+var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:( _obj = {}, _obj['comp-area-'+_vm.competenceArea.id] = true, _obj.open = _vm.menuIsOpened, _obj ),attrs:{"id":"competence-breakdown"}},[_c('header',{staticClass:"mdc-toolbar mdc-elevation--z4 bg"},[_c('div',{staticClass:"mdc-toolbar__row"},[_c('section',{staticClass:"mdc-toolbar__section mdc-toolbar__section--align-start"},[_c('button',{staticClass:"demo-menu material-icons mdc-toolbar__menu-icon",on:{"click":function($event){return _vm.clickMenu()}}},[_vm._v("menu")]),_vm._v(" "),_c('span',{staticClass:"mdc-toolbar__title catalog-title"},[_vm._v(_vm._s(_vm.competence.name))])])])]),_vm._v(" "),_c('main',{staticClass:"competence-main"},[_c('h1',{staticClass:"mdc-typography--display1 color "},[_vm._v(_vm._s(_vm.competence.name))]),_vm._v(" "),_c('h2',{staticClass:"mdc-typography--title "},[_vm._v(_vm._s(_vm.competence.hint))]),_vm._v(" "),_c('div',{staticClass:"mdc-layout-grid competences-container"},[_c('div',{staticClass:"mdc-layout-grid__inner"},[_c('div',{staticClass:"mdc-layout-grid__cell mdc-layout-grid__cell--span-12"},[_c('div',{staticClass:"competences bl-color"},[_c('h1',[_vm._v("Descriptior ")]),_vm._v(" "),_c('ul',_vm._l((_vm.competence.descriptors),function(descriptor){return _c('li',{staticClass:"color"},[_vm._v("· "+_vm._s(descriptor))])}),0)]),_vm._v(" "),_c('div',{staticClass:"table-responsive"},[_c('table',{staticClass:"table table-bordered"},[_c('thead',{attrs:{"lass":"clickable","data-toggle":"collapse","data-target":"#progression-model","aria-expanded":"false","aria-controls":"progression-model"},on:{"click":function($event){_vm.collapse = !_vm.collapse}},model:{value:(_vm.collapse),callback:function ($$v) {_vm.collapse=$$v},expression:"collapse"}},[_c('tr',[_c('th',{staticClass:"text-center"},[_c('p',[_vm._v("THREAD")]),_c('i',{staticClass:"collapse-icon material-icons arrow",attrs:{"aria-hidden":"true"}},[(_vm.collapse)?_c('span',[_vm._v("unfold_more")]):_c('span',[_vm._v("unfold_less")])])]),_vm._v(" "),_vm._l((_vm.progressionCategories),function(category,index){return _c('td',{staticClass:"text-center",class:_vm.levelBGColor[index*2],attrs:{"scope":"col","colspan":"2","data-toggle":"tooltip","data-placement":"top","title":"Click here to see detail."}},[_c('p',{staticClass:"text-uppercase"},[_c('strong',[_vm._v(_vm._s(category.title))])]),_vm._v(_vm._s(category.description))])})],2)]),_vm._v(" "),_c('tbody',{staticClass:"collapse",attrs:{"id":"progression-model"}},[_c('tr',[_c('th',{attrs:{"rowspan":"2"}},[_vm._v("PROGRESSION MODEL")]),_vm._v(" "),_vm._l((_vm.progressionLevels),function(level,index){return _c('td',{staticClass:"mdc-layout-grid__cell mdc-layout-grid__cell--span-1",class:_vm.levelBGColor[index],attrs:{"scope":"col"}},[_vm._v(_vm._s(level.name))])})],2),_vm._v(" "),_c('tr',_vm._l((_vm.progressionLevels),function(level,index){return _c('td',{class:_vm.levelBGColor[index],attrs:{"scope":"col"}},[_c('strong',[_vm._v(_vm._s(level.level)+". "+_vm._s(level.action))]),_c('br'),_vm._v(_vm._s(level.levelDescription))])}),0)]),_vm._v(" "),_c('tbody',_vm._l((_vm.competence.threads),function(competence){return _c('tr',[_c('th',{staticStyle:{"width":"10%"},attrs:{"scope":"row"}},[_vm._v(_vm._s(competence.name))]),_vm._v(" "),_vm._l((competence.levels),function(level,index){return _c('td',{class:_vm.levelBGColor[index],staticStyle:{"width":"11.25%"}},[_vm._v(_vm._s(level.name)),(level.name ==='')?_c('i',{staticClass:"material-icons arrow cell-icon",attrs:{"aria-hidden":"true"}},[_vm._v("arrow_right_alt")]):_vm._e()])})],2)}),0)])])])])])]),_vm._v(" "),_c('comp-footer',{attrs:{"competence":_vm.competence,"competence-area":_vm.competenceArea}})],1)}
 var staticRenderFns = []
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);

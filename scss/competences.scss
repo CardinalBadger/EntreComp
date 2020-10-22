@@ -16,6 +16,9 @@ html {
   width: 100%;
 }
 
+.mdc-list-group {
+  overflow-y: auto !important;
+}
 .cell-icon {
   text-align: center;
   display: flex;

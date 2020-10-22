@@ -26,29 +26,31 @@
                 <li class="color" v-for="descriptor in competence.descriptors">&#183; {{descriptor}}</li>
               </ul>
             </div>
-            <table class="table table-bordered mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-              <thead v-model="collapse" v-on:click="collapse = !collapse" lass="clickable" data-toggle="collapse" data-target="#progression-model" aria-expanded="false" aria-controls="progression-model">
-                <tr>
-                  <th class="text-center"><p>THREAD</p><i aria-hidden="true" class="collapse-icon material-icons arrow"><span v-if="collapse">unfold_more</span><span v-else>unfold_less</span></i></th>
-                  <td class="text-center" scope="col" colspan="2" v-for="(category, index) in progressionCategories" :class="levelBGColor[index*2]" data-toggle="tooltip" data-placement="top" title="Click here to see detail."><p class="text-uppercase"><strong>{{category.title}}</strong></p>{{category.description}}</td>
-                </tr>
-              </thead>
-              <tbody id="progression-model" class="collapse">
-                <tr>
-                  <th rowspan="2">PROGRESSION MODEL</th>
-                  <td scope="col" class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1" v-for="(level, index) in progressionLevels" :class="levelBGColor[index]">{{level.name}}</td>
-                </tr>
-                <tr>
-                  <td scope="col" v-for="(level, index) in progressionLevels" :class="levelBGColor[index]"><strong>{{level.level}}. {{level.action}}</strong><br/>{{level.levelDescription}}</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr v-for="competence in competence.threads">
-                  <th scope="row" style="width: 10%">{{competence.name}}</th>
-                  <td style="width: 11.25%" v-for="(level,index) in competence.levels"  :class="levelBGColor[index]">{{level.name}}<i aria-hidden="true" class="material-icons arrow cell-icon" v-if="level.name ===''">arrow_right_alt</i></td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <thead v-model="collapse" v-on:click="collapse = !collapse" lass="clickable" data-toggle="collapse" data-target="#progression-model" aria-expanded="false" aria-controls="progression-model">
+                  <tr>
+                    <th class="text-center"><p>THREAD</p><i aria-hidden="true" class="collapse-icon material-icons arrow"><span v-if="collapse">unfold_more</span><span v-else>unfold_less</span></i></th>
+                    <td class="text-center" scope="col" colspan="2" v-for="(category, index) in progressionCategories" :class="levelBGColor[index*2]" data-toggle="tooltip" data-placement="top" title="Click here to see detail."><p class="text-uppercase"><strong>{{category.title}}</strong></p>{{category.description}}</td>
+                  </tr>
+                </thead>
+                <tbody id="progression-model" class="collapse">
+                  <tr>
+                    <th rowspan="2">PROGRESSION MODEL</th>
+                    <td scope="col" class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1" v-for="(level, index) in progressionLevels" :class="levelBGColor[index]">{{level.name}}</td>
+                  </tr>
+                  <tr>
+                    <td scope="col" v-for="(level, index) in progressionLevels" :class="levelBGColor[index]"><strong>{{level.level}}. {{level.action}}</strong><br/>{{level.levelDescription}}</td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr v-for="competence in competence.threads">
+                    <th scope="row" style="width: 10%">{{competence.name}}</th>
+                    <td style="width: 11.25%" v-for="(level,index) in competence.levels"  :class="levelBGColor[index]">{{level.name}}<i aria-hidden="true" class="material-icons arrow cell-icon" v-if="level.name ===''">arrow_right_alt</i></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
           <!-- <div id="competences-chart-container" class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6"></div> -->
         </div>
@@ -66,7 +68,7 @@
   import {MDCDialog} from '@material/dialog';
   import {progressionCategories, progressionLevels} from '../data/progressionModelCategories.js';
 
-  let circlesChart = new CirclesChart('competences-chart-container');
+  // let circlesChart = new CirclesChart('competences-chart-container'); // remove Circle Chart
 
   export default {
     mixins: [extractCompetencesFromUrlMixin],
@@ -95,15 +97,16 @@
       }
     },
     mounted(){
-      console.log("view is mounted");
-      circlesChart.drawChart();
-      circlesChart.select(this.competence.id, 'competence'); // select only competences and not areas
+      // Remove Circle chart
+      // console.log("view is mounted");
+      // circlesChart.drawChart();
+      // circlesChart.select(this.competence.id, 'competence'); // select only competences and not areas
 
-      const dialog = new MDCDialog(document.querySelector('#mdc-dialog'));
-      document.querySelector('#assess-tool').addEventListener('click', function (evt) {
-        dialog.lastFocusedTarget = evt.target;
-        dialog.show();
-      });
+      // const dialog = new MDCDialog(document.querySelector('#mdc-dialog'));
+      // document.querySelector('#assess-tool').addEventListener('click', function (evt) {
+      //   dialog.lastFocusedTarget = evt.target;
+      //   dialog.show();
+      // });
     },
     created()
     {
@@ -113,22 +116,22 @@
       this.progressionCategories = progressionCategories;
       this.progressionLevels = progressionLevels;
 
-      eventBus.$on("MDCPersistentDrawer:open", () => {
-        this.menuIsOpened = true;
-        setTimeout(function() {
-          circlesChart.resizeChart()
-        }, 50)
-      });
-      eventBus.$on("MDCPersistentDrawer:close", () => {
-        this.menuIsOpened = false;
-        setTimeout(function() {
-          circlesChart.resizeChart()
-        }, 50)
-      });
+      // eventBus.$on("MDCPersistentDrawer:open", () => {
+      //   this.menuIsOpened = true;
+      //   setTimeout(function() {
+      //     circlesChart.resizeChart()
+      //   }, 50)
+      // });
+      // eventBus.$on("MDCPersistentDrawer:close", () => {
+      //   this.menuIsOpened = false;
+      //   setTimeout(function() {
+      //     circlesChart.resizeChart()
+      //   }, 50)
+      // });
       eventBus.$on("competence-changed", (comp) => {
         this.competence = comp;
         this.competenceArea = this.findCompetenceAreaByCompetence(comp);
-        circlesChart.select(comp.id, 'competence'); // select only competences and not areas
+        // circlesChart.select(comp.id, 'competence'); // select only competences and not areas
       });
     }
   }
