@@ -21,7 +21,7 @@ export class IntoAction {
       ),
       new Thread(
         2,
-        'Work independently.',
+        'Work independently',
         [
           new ThreadLevel(1, 'I show some independence in carrying out tasks I am given.', Levels.level1),
           new ThreadLevel(2, 'I can work independently in simple value-creating activities.', Levels.level2),
@@ -69,7 +69,7 @@ export class IntoAction {
       ),
       new Thread(
         5,
-        'Plan and organize.',
+        'Plan and organize',
         [
           new ThreadLevel(1, 'I can carry out a simple plan for value-creating activities.', Levels.level1),
           new ThreadLevel(2, 'I can deal with a range of simple tasks at the same time without feeling uncomfortable.', Levels.level2),
@@ -83,7 +83,7 @@ export class IntoAction {
       ,
       new Thread(
         6,
-        'Develop sustainable business plans.',
+        'Develop sustainable business plans',
         [
           new ThreadLevel(1, '', Levels.level1),
           new ThreadLevel(2, '', Levels.level2),
@@ -126,7 +126,7 @@ export class IntoAction {
       ),
       new Thread(
         9,
-        'Be flexible and adapt to changes.',
+        'Be flexible and adapt to changes',
         [
           new ThreadLevel(1, 'I am open to changes.', Levels.level1),
           new ThreadLevel(2, 'I can confront and deal with changes in a constructive way.', Levels.level2),
@@ -146,7 +146,7 @@ export class IntoAction {
     return [
       new Thread(
         10,
-        'Cope with uncertainty and ambiguity.',
+        'Cope with uncertainty and ambiguity',
         [
           new ThreadLevel(1, 'I am not afraid of making mistakes while trying new things.', Levels.level1),
           new ThreadLevel(2, 'I explore my own ways to achieve things.', Levels.level2),
@@ -194,7 +194,7 @@ export class IntoAction {
     return [
       new Thread(
         13,
-        'Accept diversity (people’s differences).',
+        'Accept diversity (people’s differences)',
         [
           new ThreadLevel(1, 'I can show respect for others, their background and situations.', Levels.level1),
           new ThreadLevel(2, 'I am open to the worth that others can bring to value creating activities.', Levels.level2),
@@ -208,7 +208,7 @@ export class IntoAction {
       ),
       new Thread(
         14,
-        'Develop emotional intelligence.',
+        'Develop emotional intelligence',
         [
           new ThreadLevel(1, 'I can show empathy towards others.', Levels.level1),
           new ThreadLevel(2, 'I can recognise the role of my emotions, attitudes and behaviours in shaping others people’s attitudes and behaviours and vice versa.', Levels.level2),
@@ -297,7 +297,7 @@ export class IntoAction {
       ),
       new Thread(
         20,
-        'Learn to learn.',
+        'Learn to learn',
         [
           new ThreadLevel(1, 'I can provide examples that show that my abilities and competence have increased with experience.', Levels.level1),
           new ThreadLevel(2, 'I can anticipate that my abilities and competence will grow with experience, through both successes and failures.', Levels.level2),
