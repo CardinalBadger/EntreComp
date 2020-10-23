@@ -1,4 +1,4 @@
-# EntreComp: The Entrepreneurship Competence Framework
+# EntreComp Interactive
 > There is a growing awareness that entrepreneurial competences, knowledge and attitudes can be learned and in turn lead to the widespread development of entrepreneurial mind-sets and culture, which benefit individuals and society as a whole.
 - Bacigalupo, M., Kampylis, P., Punie, Y., & Van den Brande, G. (2016). EntreComp: The entrepreneurship competence framework. Luxembourg: Publication Office of the European Union, 10, 593884.
 
