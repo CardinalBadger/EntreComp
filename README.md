@@ -3,7 +3,7 @@
 - Bacigalupo, M., Kampylis, P., Punie, Y., & Van den Brande, G. (2016). EntreComp: The entrepreneurship competence framework. Luxembourg: Publication Office of the European Union, 10, 593884.
 
 Margherita Bacigalupo commented on this project:
-> Thank you for sharing with us your work to make EntreComp more usable. It definitely improves readability and removes a barrier to the take up of the framework
+> Thank you for sharing with us your work to make EntreComp more usable. It definitely improves readability and removes a barrier to the take up of the framework.
 
 ## The vision
  The vision is this project is to:
