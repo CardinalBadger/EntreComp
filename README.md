@@ -2,6 +2,8 @@
 > There is a growing awareness that entrepreneurial competences, knowledge and attitudes can be learned and in turn lead to the widespread development of entrepreneurial mind-sets and culture, which benefit individuals and society as a whole.
 - Bacigalupo, M., Kampylis, P., Punie, Y., & Van den Brande, G. (2016). EntreComp: The entrepreneurship competence framework. Luxembourg: Publication Office of the European Union, 10, 593884.
 
+Margherita Bacigalupo commented on this project:
+> Thank you for sharing with us your work to make EntreComp more usable. It definitely improves readability and removes a barrier to the take up of the framework
 
 ## The vision
  The vision is this project is to:
