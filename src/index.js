@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import $ from 'jquery';
-// import 'bootstrap-sass'
 import 'bootstrap'
 import '../scss/index.scss'
 import CirclesChart from './circles-chart.js'
