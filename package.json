@@ -1,8 +1,8 @@
 {
   "name": "entrepreneurship-competence",
-  "description": "",
-  "version": "0.0.1",
-  "author": "SciFY",
+  "description": "Interactive version of EntreComp framework is created by Joongseob Kim. It has developed as a part of the entrepreneurial internship project at StartHub Wageningen.",
+  "version": "1.0",
+  "author": "JOONGSEOB KIM",
   "license": "MIT",
   "private": true,
   "scripts": {
