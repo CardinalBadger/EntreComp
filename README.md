@@ -16,7 +16,7 @@ Margherita Bacigalupo commented on this project:
  that was released at 2018 at EU SCIENCE HUB
 
  Interactive version of EntreComp framework is created by [Joongseob Kim](https://www.linkedin.com/in/joongseob-kim). It has developed as a part of the entrepreneurial internship project at [StartHub Wageningen](https://www.starthubwageningen.nl).
-
+StartHub Fork
 
 ## Build Setup
 
